@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="uas.css">
+
+    <title>Penggajihan Karyawan Yayasan Assalaam</title>
+  </head>
+  <body>
+    <center><h1>PENGGAJIHAN <br>
+    GURU/KARYAWAN YAYASAN ASSALAAM</h1></center>
+    <br>
+
+    <fieldset>
+        <form action="validasi.php" method="post">
+        <input class="form-control" type="text" value="Data Penggajihan" disabled readonly>
+        <div class="mb-4">
+            <label class="form-label">No</label>
+            <input type="number" class="form-control" name="no" placeholder="No">
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Nama</label>
+            <input type="text" class="form-control" name="nama" placeholder="Nama">
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Unit Pendidikan</label>
+            <select class="form-select" aria-label="Default select example" name="unit">
+                <option selected>Pilih Unit Pendidikan</option>
+                <option value="TK">TK</option>
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
+                <option value="SMA">SMA</option>
+                <option value="SMK">SMK</option>
+              </select>
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Tanggal Penggajihan</label>
+            <input type="date" class="form-control" name="tanggal">
+          </div>
+          <div class="row">
+            <div class="col-6">
+                <center><h3><i>Gaji</i></h3></center>
+                <label class="form-label">Jabatan</label>
+            <select class="form-select" aria-label="Default select example" name="jabatan">
+                <option selected>Pilih Jabatan</option>
+                <option value="Kepala Sekolah">Kepala Sekolah</option>
+                <option value="Wakasek">Wakasek</option>
+                <option value="Guru">Guru</option>
+                <option value="Karyawan">Karyawan</option>
+            </select>
+            <label class="form-label">Lama Kerja</label>
+            <input type="number" class="form-control" name="lama">
+            <label class="form-label">Status Kerja</label>
+            <select class="form-select" aria-label="Default select example" name="status">
+                <option selected>Pilih Status Kerja</option>
+                <option value="Tetap">Tetap</option>
+                <option value="Tidak Tetap">Tidak Tetap</option>
+            </select>
+            </div>
+            <div class="col-6">
+                <center><h3><i>Potongan</i></h3></center>
+                <label class="form-label">BPJS</label>
+            <input type="number" class="form-control" name="bpjs">
+            <label class="form-label">Pinjaman</label>
+            <input type="number" class="form-control" name="pinjaman">
+            <label class="form-label">Cicilan</label>
+            <input type="number" class="form-control" name="cicilan">
+            <label class="form-label">Infaq</label>
+            <input type="number" class="form-control" name="infaq">
+            </div>
+          </div>
+          <div class="mt-4 text-center">
+            <button class="btn btn-primary" name="proses">Proses</button>
+          </div>
+        </form>
+    </fieldset>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
