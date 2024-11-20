@@ -31,12 +31,12 @@ fieldset {
 }
 
 .form-control {
-    border: 1px solid #007BFF; 
+    border: 1px solid #080808; 
 }
 
 .form-control:focus {
     border-color: #0b0b0b; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    box-shadow: 0 0 5px rgba(3, 3, 3, 0.5); 
 }
 
 .row {

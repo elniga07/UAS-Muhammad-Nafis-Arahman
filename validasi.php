@@ -68,61 +68,67 @@ $pinjaman = $_POST["pinjaman"];
 $cicilan = $_POST["cicilan"];
 $infaq = $_POST["infaq"];
 
-switch ($jabatan) {
-    case 'Kepala Sekolah':
-        $gaji = 10000000;
-        break;
-    case 'Wakasek':
-        $gaji = 7500000;
-        break;
-    case 'Guru':
-        $gaji = 5000000;
-        break;
-    case 'OB':
-        $gaji = 2500000;
-        break;
-    default:
-        $gaji = 0;
-        break;
-}
 
-if ($status == "Tetap") {
-    $bonus = 1000000;
-} else{
-    $bonus = 0;
-}
+class data {
 
-$gaji_bersih = $gaji + $bonus - $bpjs - $pinjaman - $cicilan - $infaq ;
+    public $gaji;
+    public $bonus;
+    public $gaji_bersih;
 
-echo"<table align='center'>
-        <tr align='center'>
-            <td colspan='2' bgcolor='grey' style='color:black;'><h3>$nama</h3></td>
-        </tr>
+    public function data_karyawan ($a,$b,$c,$d,$e,$f,$g,$h,$i,$j,$k){
+
+        switch ($e) {
+            case 'Kepala Sekolah':
+                $gaji = 10000000;
+                break;
+            case 'Wakasek':
+                $gaji = 700000;
+                break;
+            case 'Guru':
+                $gaji = 5000000;
+                break;
+            case 'OB':
+                $gaji = 2500000;
+                break;
+            default:
+                $gaji = 0;
+                break;
+        }
+
+        if ($g == "Tetap") {
+            $bonus = 1000000;
+        } else{
+            $bonus = 0;
+        }
+
+        $gaji_bersih = $gaji + $bonus - $h - $i - $j - $k ;
+
+        echo "<table align='center' style='color:blue;'>
         <tr>
-            <td colspan='2' align='center'><h3>Primary card title</h3></td>
+            <td colspan='2' align='center'><h3>Data Penggajihan</h3></td>
         </tr>
         <tr>
             <td>No</td>
-            <td>:$no</td>
+            <td>:$a</td>
         </tr>
         <tr>
             <td>Nama</td>
-            <td>:$nama</td>
+            <td>:$b</td>
         </tr>
         <tr>
             <td>Unit Pendidikan</td>
-            <td>:$unit</td>
+            <td>:$c</td>
         </tr>
         <tr>
             <td>Tanggal Gaji</td>
-            <td>:$tanggal</td>
+            <td>:$d</td>
         </tr>
         <tr>
             <td colspan='2' align='center'><h1><i>Gaji</i></h1></td>
         </tr>
         <tr>
             <td>Jabatan</td>
-            <td>:$jabatan</td>
+            <td>:$e</td>
         </tr>
         <tr>
             <td>Gaji</td>
@@ -130,11 +136,11 @@ echo"<table align='center'>
         </tr>
         <tr>
             <td>Lama Kerja</td>
-            <td>:$lama</td>
+            <td>:$f</td>
         </tr>
         <tr>
             <td>Status Kerja</td>
-            <td>:$status</td>
+            <td>:$g</td>
         </tr>
         <tr>
             <td>Bonus</td>
@@ -145,19 +151,19 @@ echo"<table align='center'>
         </tr>
         <tr>
             <td>BPJS</td>
-            <td>:$bpjs</td>
+            <td>:$h</td>
         </tr>
         <tr>
             <td>Pinjaman</td>
-            <td>:$pinjaman</td>
+            <td>:$i</td>
         </tr>
         <tr>
             <td>Cicilan</td>
-            <td>:$cicilan</td>
+            <td>:$j</td>
         </tr>
         <tr>
             <td>Infaq</td>
-            <td>:$infaq</td>
+            <td>:$k</td>
         </tr>
         <tr>
             <td colspan='2' align='center'><h1>Total</h1></td>
@@ -167,8 +173,10 @@ echo"<table align='center'>
             <td> <b>:$gaji_bersih</b></h1></td>
         </tr>
     </table>";
-
-
+    }
+}
+$cetak = new data();
+echo $cetak->data_karyawan($no,$nama,$unit,$tanggal,$jabatan,$lama,$status,$bpjs,$pinjaman,$cicilan,$infaq);
 }
 
 
